@@ -1,0 +1,121 @@
+{
+ "summary": [
+  {
+   "model": "Gradient boosting",
+   "auc": 0.9023,
+   "ap": 0.7496,
+   "cp100": 0.5712,
+   "saving_pct": 84.8945,
+   "alerts": 1015.0625,
+   "caught": 459.25,
+   "frauds": 594.6875
+  },
+  {
+   "model": "Logistic regression",
+   "auc": 0.8988,
+   "ap": 0.7193,
+   "cp100": 0.554,
+   "saving_pct": 83.424,
+   "alerts": 1108.0,
+   "caught": 450.9375,
+   "frauds": 594.6875
+  }
+ ],
+ "n_folds": 16,
+ "n_transactions": 1754155,
+ "fraud_rate": 0.008369271814634397,
+ "leakage": [
+  {
+   "model": "Gradient boosting",
+   "realistic (7-day label delay)": 0.7496,
+   "leaky (labels known at once)": 0.9974
+  },
+  {
+   "model": "Logistic regression",
+   "realistic (7-day label delay)": 0.7193,
+   "leaky (labels known at once)": 0.997
+  }
+ ],
+ "scenarios": [
+  {
+   "scenario": "Large amount (> 220)",
+   "frauds": 603,
+   "caught": 596,
+   "amount": 142124.9,
+   "recall": 0.9884,
+   "amount_recall": 0.9889
+  },
+  {
+   "scenario": "Compromised terminal",
+   "frauds": 6006,
+   "caught": 4167,
+   "amount": 321165.64,
+   "recall": 0.6938,
+   "amount_recall": 0.6933
+  },
+  {
+   "scenario": "Compromised card",
+   "frauds": 2906,
+   "caught": 2585,
+   "amount": 738524.6,
+   "recall": 0.8895,
+   "amount_recall": 0.9719
+  }
+ ],
+ "calibration": {
+  "brier_raw": 0.0033537390477617933,
+  "brier_isotonic": 0.003380375972932082,
+  "mean_predicted_raw": 0.008427232507934635,
+  "mean_predicted_isotonic": 0.008353247056659949,
+  "actual_rate": 0.008766464934140263
+ },
+ "cost_sensitivity": [
+  {
+   "review_cost": 1,
+   "alerts_per_day": 351.571,
+   "recall": 0.766,
+   "saving_pct": 84.64
+  },
+  {
+   "review_cost": 3,
+   "alerts_per_day": 156.857,
+   "recall": 0.745,
+   "saving_pct": 81.951
+  },
+  {
+   "review_cost": 10,
+   "alerts_per_day": 85.286,
+   "recall": 0.702,
+   "saving_pct": 76.269
+  },
+  {
+   "review_cost": 30,
+   "alerts_per_day": 60.143,
+   "recall": 0.643,
+   "saving_pct": 63.153
+  }
+ ],
+ "importance": {
+  "amt_vs_card_mean_30d": 0.4024,
+  "term_risk_7d": 0.3305,
+  "term_risk_30d": 0.2135,
+  "amt_vs_card_mean_7d": 0.1337,
+  "card_mean_amt_30d": 0.1061,
+  "amount": 0.091,
+  "card_mean_amt_7d": 0.0327,
+  "term_n_7d": 0.0109,
+  "term_risk_1d": 0.0092,
+  "amt_vs_card_mean_1d": 0.0068
+ },
+ "psi_top": {
+  "term_n_30d": 0.0105,
+  "card_n_30d": 0.0043,
+  "card_n_7d": 0.0029,
+  "card_mean_amt_30d": 0.0008,
+  "card_mean_amt_1d": 0.0008
+ },
+ "ap_trend_per_week": {
+  "Gradient boosting": -0.0010127469059089086,
+  "Logistic regression": -0.0016922211034206996
+ }
+}
