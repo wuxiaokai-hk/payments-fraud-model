@@ -77,3 +77,7 @@ Worldline). There are about 5,000 cards (4,990 with transactions), 10,000 termin
 and 0.84% are fraudulent, under three patterns: large amounts, compromised terminals and compromised cards. The
 pattern label is used only to break down the results, never as a feature. The data are downloaded at run time
 and not stored here.
+
+## License
+
+MIT, see [LICENSE](LICENSE). Free to use, change and share. Data downloaded from public sources stay under their providers' terms. Independent open-source project, not affiliated with or endorsed by any employer, regulator or data vendor.
